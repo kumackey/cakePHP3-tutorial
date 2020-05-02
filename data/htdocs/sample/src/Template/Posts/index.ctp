@@ -11,6 +11,7 @@ $this->assign('title', 'Blog Posts');
   <?php foreach ($posts as $post) : ?>
     <li>
       <?= $this->Html->link($post->title, ['action'=>'view', $post->id]); ?>
+      <?= $this->Html->link('[Edit]', ['action'=>'edit', $post->id], ['class'=>'fs12']); ?>
     </li>
   <?php endforeach ?>
 </ul>
