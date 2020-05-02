@@ -29,3 +29,12 @@ header {
   font-size: 14px;
   font-weight: bold;
 }
+
+.fs12 {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.pull-right {
+  float: right;
+}
