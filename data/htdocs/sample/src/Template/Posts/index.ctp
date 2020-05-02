@@ -12,6 +12,13 @@ $this->assign('title', 'Blog Posts');
     <li>
       <?= $this->Html->link($post->title, ['action'=>'view', $post->id]); ?>
       <?= $this->Html->link('[Edit]', ['action'=>'edit', $post->id], ['class'=>'fs12']); ?>
+      <?=
+        $this->Form->postLink(
+          '[x]',
+          ['action'=>'delete', $post->id],
+          ['confirm'=>'Are you sure?', 'class'=>'fs12']
+        );
+      ?>
     </li>
   <?php endforeach ?>
 </ul>

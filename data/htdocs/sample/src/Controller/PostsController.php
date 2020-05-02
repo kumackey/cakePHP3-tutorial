@@ -45,4 +45,16 @@ class PostsController extends AppController
     }
     $this->set(compact('post'));
   }
+
+  public function delete($id = null)
+  {
+    $this->request->allowMethod(['post', 'delete']);
+    $post = $this->Posts->get($id);
+    if ($this->Posts->delete($post)) {
+      $this->Flash->success('Delete Success!');
+    } else {
+      $this->Flash->error('Delete Error!');
+    }
+    return $this->redirect(['action'=>'index']);
+  }
 }
