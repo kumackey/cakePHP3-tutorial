@@ -7,7 +7,7 @@ $this->assign('title', 'Add New');
   Add New
 </h1>
 <?= $this->Form->create($post); ?>
-  <?= $this->Form->input('title'); ?>
-  <?= $this->Form->input('body', ['rows'=>'3']); ?>
-  <?= $this->Form->button('Add'); ?>
+<?= $this->Form->input('title'); ?>
+<?= $this->Form->input('body', ['rows'=>'3']); ?>
+<?= $this->Form->button('Add'); ?>
 <?= $this->Form->end(); ?>
